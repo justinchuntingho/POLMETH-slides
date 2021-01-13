@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Moving Beyond Count-based Approach: Understanding Hong Kong Nationalism with Topic Network</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section data-background="bg1.jpg">
+
+                <p>
+  			    <div style = "background-color:rgba(0,0,0,0.7);"><h3>Understanding Hong Kong Nationalism with Topic Network</h3></div>
+                <br>
+                <h3 style = "background-color:rgba(0,0,0,0.7);">Justin Chun-ting Ho</h3>
+                <h4 style = "background-color:rgba(0,0,0,0.7);">Sciences Po</h4>
+  			    </p>
+  			  </section>
+              <section>
+                <h3>Brief History of Hong Kong</h3>
+              </section>
+              <section data-background="queencome.png">
+                  <h3 style = "background-color:rgba(0,0,0,0.7);">The British colonised <br>Hong Kong in 1842</h3>
+              </section>
+              <section data-background="queenbye.gif">
+                  <h3 style = "background-color:rgba(0,0,0,0.7);">The British left</h3>
+              </section>
+              <section data-background="chinatookover.jpg">
+                  <h3 style = "background-color:rgba(0,0,0,0.7);">The Chinese took over in 1997</h3>
+              </section>
+							<section>
+									<img src="onecountrytwosystems.jpg" class="stretch" style="background:none; border:none; box-shadow:none;"><br>
+							</section>
+							<section data-background="protest.jpg">
+									<h3 style = "background-color:rgba(0,0,0,0.7);">Things didn't work out well</h3>
+							</section>
+							<section>
+									<img src="dupre.jpeg" class="stretch" style="background:none; border:none; box-shadow:none;"><br>
+									<small>Source: Dupré, J.F. (2020). Making Hong Kong Chinese: State Nationalism and its Blowbacks in a Recalcitrant City. <i>Nationalism and Ethnic Politics</i>, 26(1), 8–26.</small>
+							</section>
+
+              <section>
+                <h2>Data</h2>
+              </section>
+              <section data-background="bg2.jpg">
+                  <div style = "background-color:rgba(0,0,0,0.7);">
+
+                <h3>Data</h3>
+                    <p><ul><li>Facebook page of key nationalist organisations in Hong Kong</li>
+                        <li>8,783 posts, average of 70 characters per post, mostly Chinese but also English</li></ul></p>
+                    </div>
+              </section>
+              <section>
+                <h2>Why Facebook?</h2>
+              </section>
+              <section data-background="umbrella.jpg">
+                  <div style = "background-color:rgba(0,0,0,0.7);">
+
+                  <h3>Why Facebook?</h3>
+                <ul><li>An important platform of political communication <small>(Michael Chan, Hsuan-Ting Chen & Francis L.F. Lee, 2016; <br>Hsuan-Ting Chen, Michael Chan & Francis L.F. Lee, 2016; <br>Francis L.F. Lee & Joseph Man Chan, 2015; Gary Tang & Francis L.F. Lee, 2013)</small></li>
+                    <li>A major channel of mobilization during the Umbrella Movement <small>(Paul S. N. Lee, Clement Y. K. So & Louis Leung, 2015)</small></li>
+                    <li>All nationalist groups use Facebook</li></ul>
+                </div>
+              </section>
+              <section>
+                <h2>Topic Modeling</h2>
+              </section>
+              <section>
+                  <img src="blei.png" class="stretch" style="background:none; border:none; box-shadow:none;"><br>
+              </section>
+							<section>
+										<section>
+											<h3>Choosing K</h3>
+													<p><ul>
+														<li>A list of candidate K were produced.</li>
+													  <li>Topic models were estimated with each candidate K.</li>
+														<li>Reading the top-words of all topics of all candidate models.</li>
+														<li>In-depth validation of the ten most salient documents of all topics.</li></ul></p>
+										</section>
+										<section>
+												<img src="perplexity.png" width="45%" style="background:none; border:none; box-shadow:none;">
+												<img src="ldatuning.png" width="45%" style="background:none; border:none; box-shadow:none;"><br>
+										</section>
+						</section>
+              <section>
+                  <img src="55topics_rel_label_eng.png" class="stretch" style="background:none; border:none; box-shadow:none;"><br>
+              </section>
+              <section>
+                <h2>Count-based Approach</h2>
+              </section>
+							<section>
+				              <section>
+				                  <img src="topic_count_wparty.png" class="stretch" style="background:none; border:none; box-shadow:none;"><br>
+				              </section>
+											<section>
+													<img src="exp_campaignbooth.png" class="stretch" style="background:none; border:none; box-shadow:none;"><br>
+											</section>
+											<section>
+													<img src="exp_callforvote.png" class="stretch" style="background:none; border:none; box-shadow:none;"><br>
+											</section>
+						</section>
+              <section>
+                  <img src="topic_freq.png" class="stretch" style="background:none; border:none; box-shadow:none;"><br>
+              </section>
+              <section>
+                <h3>Limitation</h3>
+                    <p><ul>
+                    <li>Texts serve different purposes</li>
+                    <li>Count-based approach assumes all texts matter to the discourse equally</li>
+                    <li>Abundance is not equal to importance<br>
+              </section>
+              <section>
+                <h2>Topic Network Approach</h2>
+              </section>
+              <section>
+                <h3>Topic Network Approach</h3>
+                    <p><ul>
+                    <li>Concepts within a discourse do not exist in isolation, they are dependent on each other in various ways</li>
+                    <li>Discourse as network phenomenon</li>
+                    <li>Core concepts are conecepts that unite different concepts into a coherent whole<br>
+              </section>
+							<section>
+								<h3>Topic Network Approach</h3>
+										<p><ul>
+										<li>Pearson’s correlation coefficients between the beta values of all topics.</li>
+										<li>Retain only the strongest 20% of the edges.</li>
+										<li>Identify core nodes using degree centrality.<br>
+							</section>
+							<section data-background="topic_freq_core_per.png" data-background-size="80%">
+							</section>
+							<section data-background="topic_freq_core_per.png" data-background-size="80%">
+									<div style = "background-color:rgba(0,0,0,0.7);">
+
+									<h3>China Threat</h3>
+								<ul><li>Recurring narractives throughout the study period</li>
+										<li>Stalled democratisation</li>
+										<li>Protest arrests </li>
+										<li>China as an outside invader, Hong Kong government as a mere extension of China’s ruling arm</li></ul>
+								</div>
+							</section>
+							<section data-background="topic_freq_core_per.png" data-background-size="80%">
+									<div style = "background-color:rgba(0,0,0,0.7);">
+
+									<h3>Political Controversies</h3>
+								<ul><li>Overlapping pattern denotes changing focus of discussion</li>
+										<li>Started as economic issues</li>
+										<li>Quickly overtaken by the discussion on various issues related to political rights</li>
+										<li>China as a threat to liberal values and the Hong Kong way of life</li></ul>
+								</div>
+							</section>
+							<section data-background="topic_freq_core_per.png" data-background-size="80%">
+									<div style = "background-color:rgba(0,0,0,0.7);">
+
+									<h3>Localism and Nationalism</h3>
+								<ul><li>Decreasing trend of Localism, an increasing trend of Hong Kong Nation</li>
+									<li>Localism as protecting Hong Kong’s interests and identity</li>
+										<li>Adopting of the rhetoric of (civic) nationalism</li></ul>
+								</div>
+							</section>
+							<section data-background="topic_freq_core_per.png" data-background-size="80%">
+									<div style = "background-color:rgba(0,0,0,0.7);">
+
+									<h3>Internationalism and Protest</h3>
+								<ul><li>Decreasing trend of Struggle & Resistance, an increasing trend of International Support</li>
+									<li>"Valiant struggle" (勇武抗爭)</li>
+										<li>Mustering international support the democracy and autonomy of Hong Kong</li></ul>
+								</div>
+							</section>
+              <section>
+                  <h2>Thank You!</h2>
+                <h4>Twitter: @justin_ct_ho<br>Github: justinchuntingho<br>Email: justin.chunting.ho@sciencespo.fr</h4>
+              </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+                slideNumber: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
